@@ -1,9 +1,4 @@
 <h1>Đây là component home!</h1>
-<p>Đây là dòng thứ 2 trong Home</p>
-<h1>Họ tên của tôi là : {{ name }}</h1>
-
-<!-- *ngIf điều kiện -->
-<!-- Nếu giá trị trong biến age lớn hơn 18 -->
-<h2 *ngIf="age > 18">Bạn quá già rồi!</h2>
-<!-- Nếu giá trị trong biến age nhỏ hơn hoặc bằng 18 -->
-<h2 *ngIf="age <= 18">Bạn đang còn trẻ!</h2>
+<input type="text" [(ngModel)]="name">
+<h2>Chào bạn {{ name }}</h2>
+<button (click)="resetName()">Reset tên</button>
