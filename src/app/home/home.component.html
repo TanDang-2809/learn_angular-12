@@ -2,9 +2,8 @@
 <p>Đây là dòng thứ 2 trong Home</p>
 <h1>Họ tên của tôi là : {{ name }}</h1>
 
-
-<!-- Cách 1 :  -->
-<!-- lấy giá trị của biến name -->
-<input type="text" value="{{ name }}" title="1. Đây là tên {{ name }}"> <br>
-<!-- Cách 2 :  -->
-<input type="text" [value]="name" [title]="'2. Đây là tên ' + name">
+<!-- *ngIf điều kiện -->
+<!-- Nếu giá trị trong biến age lớn hơn 18 -->
+<h2 *ngIf="age > 18">Bạn quá già rồi!</h2>
+<!-- Nếu giá trị trong biến age nhỏ hơn hoặc bằng 18 -->
+<h2 *ngIf="age <= 18">Bạn đang còn trẻ!</h2>
