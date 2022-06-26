@@ -10,13 +10,20 @@
 <!-- Create table -->
 <table class="table_object">
   <tr>
-    <th>First Name</th>
-    <th>LastName</th>
-    <th>Points</th>
+    <th>STT</th>
+    <th>Tên</th>
+    <th>Giá</th>
+    <th>Đại hạ giá</th>
   </tr>
-  <tr>
-    <td>Tân</td>
-    <td>Đặng</td>
-    <td>50</td>
+  <tr *ngFor="let trai of traiCay2; let i = index">
+    <td>{{ i + 1}}</td>
+    <td>{{ trai.ten | uppercase}}</td>
+    <td class="right">
+      <span [ngClass]="{'so-am' : trai.gia < 0}">{{ trai.gia }}</span>
+      <!-- discount : khi giá nhỏ hơn 0 thì hiện màu đỏ -->
+    </td>
+    <td>
+      <span *ngIf="trai.haGia">Đang hạ giá!</span>
+    </td>
   </tr>
 </table>

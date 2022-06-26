@@ -3,4 +3,15 @@ li {
 }
 .table_object, th, td{
     border: 1px solid black;
+    // border-collapse: separate;
 }
+th, td {
+    min-width: 100px;
+}
+.right {
+    text-align: right;
+}
+.so-am {
+    color: red;
+}
+
