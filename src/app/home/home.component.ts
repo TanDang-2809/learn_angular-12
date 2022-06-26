@@ -8,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 export class HomeComponent implements OnInit {
   //khai báo biến
   public name = 'Tan Dang';
-  constructor() { }
+  //2 phần tử trong mảng
+  public traiCay = ['Cam', 'Táo', 'Xoài', 'Ổi'];
+  constructor() {}
 
-  ngOnInit(): void {
+  public ngOnInit(): void {
+    console.log('Các loại trái cây : ', this.traiCay);
   }
 
 }
