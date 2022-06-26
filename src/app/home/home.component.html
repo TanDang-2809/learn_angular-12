@@ -19,7 +19,7 @@
     <td>{{ i + 1}}</td>
     <td>{{ trai.ten | uppercase}}</td>
     <td class="right">
-      <span [ngClass]="{'so-am' : trai.gia < 0}">{{ trai.gia }}</span>
+      <span [ngClass]="{'so-am' : trai.gia < 0}">{{ trai.gia | currency: "VND":"symbol":"1.2" }}</span>
       <!-- discount : khi giá nhỏ hơn 0 thì hiện màu đỏ -->
     </td>
     <td>
