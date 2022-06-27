@@ -27,3 +27,19 @@
     </td>
   </tr>
 </table>
+
+<!-- Chọn tỉnh thành phố -->
+Tỉnh / Thành phố :
+<!-- (change) dùng để bắt sự kiện và thay đổi khi mỗi lần chọn khác nhau-->
+<select class="list_city" name="city" id="city" (change)="changeCity($event)">
+  <option *ngFor="let data of vietNamData" value="{{ data.city }}">
+    {{ data.city }}
+  </option>
+</select>
+<br>
+Quận / Huyện :
+<select class="list_district" name="district" id="district">
+  <option *ngFor="let district of districts" value="{{ district }}">
+    {{ district }}
+  </option>
+</select>
