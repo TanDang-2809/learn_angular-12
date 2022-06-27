@@ -23,7 +23,7 @@
       <!-- discount : khi giá nhỏ hơn 0 thì hiện màu đỏ -->
     </td>
     <td>
-      <span *ngIf="trai.haGia">Đang hạ giá!</span>
+      <span>{{ trai.haGia | onSale | uppercase }}</span>
     </td>
   </tr>
 </table>
